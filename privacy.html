@@ -69,9 +69,12 @@
   <h3>Network credentials</h3>
   <p>To act as an always-on bouncer, Lurker has to reconnect to your IRC networks while you are
     away — so any server, NickServ, or SASL passwords you ask it to store cannot be one-way hashed;
-    they have to be kept in a form Lurker can replay to the network. They are stored on your cell
-    and are not additionally encrypted at rest, so treat anything you store here as recoverable by
-    the service, and don't store credentials you would not want held that way.</p>
+    they have to be kept in a form Lurker can replay to the network. They are
+    <strong>encrypted at rest</strong> (AES-256-GCM) on your cell, with the encryption key held
+    separately from the database backups — so the data we replicate to object storage holds only
+    ciphertext. Because the service must decrypt them to reconnect you, this is not zero-knowledge:
+    treat anything you store here as recoverable by the service, and don't store credentials you
+    would not want held that way.</p>
   <h3>IRC connection security</h3>
   <p>The connection between you and Lurker is encrypted. The connection between Lurker and a given
     IRC network depends on that network — some support TLS and some don't — and the network and the
