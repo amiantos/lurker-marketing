@@ -168,6 +168,7 @@ a:hover { background: var(--accent); color: var(--accent-ink); border-color: var
 
 /* ── numbered sections ────────────────────────────────────────────────────── */
 .section { padding: 44px 0; border-bottom: 1px solid var(--rule-soft); }
+.section:last-child { border-bottom: 0; }
 .eyebrow {
   font-family: var(--mono);
   font-size: 12px;
