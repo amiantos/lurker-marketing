@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lurker — FAQ</title>
+<meta name="description" content="Frequently asked questions about Lurker: always-on IRC, self-hosting vs the hosted service, history, mobile, privacy, account deletion, and access." />
+<link rel="stylesheet" href="/style.css" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png" />
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="/"><img class="mark" src="/img/lurker-icon-192.png" alt="Lurker" width="38" height="38" /><span class="wordmark">LURKER</span></a>
+    <p class="masthead-sub">Frequently Asked Questions</p>
+    <div class="docctl">
+      <span>Doc. LKR-FAQ</span><span>Rev. β</span><span>Field Reference</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap prose">
+  <h1>FAQ</h1>
+
+  <h2><span class="s">A</span>The basics</h2>
+
+  <h3>What is Lurker?</h3>
+  <p>A modern, always-on IRC client and bouncer. It stays connected to your IRC networks so your
+    channels keep running and your history is waiting for you the next time you look — on phone,
+    laptop, or a browser tab.</p>
+
+  <h3>Self-host or hosted?</h3>
+  <p>Both. Lurker is open source — run it yourself, for free, forever. Or use the hosted service at
+    lurker.chat and we run it for you. It's the same software either way.</p>
+
+  <h3>Which IRC networks can I use?</h3>
+  <p>Any standard IRC network — Libera.Chat, OFTC, and others. Lurker is your seat; the networks are
+    independent and operated by other people.</p>
+
+  <h3>Is it really always connected?</h3>
+  <p>Yes. Lurker holds your connection open and reconnects automatically, so you stay present in your
+    channels even with every window closed.</p>
+
+  <h3>Do I get history?</h3>
+  <p>Yes. Everything in your channels is recorded and synced across all of your devices, with search.</p>
+
+  <h3>Does it work on mobile?</h3>
+  <p>Yes — it's a fast web app, installable as a PWA, with notifications.</p>
+
+  <h2><span class="s">B</span>Account &amp; privacy</h2>
+
+  <h3>How are my network passwords stored?</h3>
+  <p>To reconnect you automatically, Lurker has to be able to replay any server or NickServ passwords
+    you store — so they're held under reversible encryption with a per-account key and decrypted only
+    when sent to the network. Your account password itself is a one-way scrypt hash. See the
+    <a href="/privacy">Privacy Policy</a>.</p>
+
+  <h3>Is my conversation private?</h3>
+  <p>Your connection to Lurker is encrypted, but IRC itself is a public medium — the networks and the
+    other users in your channels receive what you send. Don't send anything sensitive over a network
+    you don't trust.</p>
+
+  <h3>How do I delete my account?</h3>
+  <p>Close it from your settings at any time. We hard-delete your data and release your email so it's
+    free to register again; your account identifier is retired, never reused.</p>
+
+  <h2><span class="s">C</span>Access &amp; pricing</h2>
+
+  <h3>How do I get access?</h3>
+  <p>lurker.chat is onboarding by request during the beta —
+    <a href="mailto:access@lurker.chat?subject=Lurker%20access%20request">request an invitation</a>.
+    Self-hosting is available immediately if you'd rather not wait.</p>
+
+  <h3>What does it cost?</h3>
+  <p>The hosted service is free during the beta; paid plans will come later. Self-hosting the
+    open-source edition is free, forever.</p>
+
+  <h2><span class="s">D</span>For network operators</h2>
+
+  <h3>I run an IRC network — how do I identify or ban a Lurker user?</h3>
+  <p>Lurker users carry a verified, per-account ident (<code>u&lt;id&gt;</code>) via a working identd,
+    so you can ban one account cleanly. See <a href="/networks">For Network Operators</a> and
+    <a href="/abuse">Report Abuse</a>.</p>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <nav>
+      <a href="/">Overview</a>
+      <a href="/about">About</a>
+      <a href="/faq">FAQ</a>
+      <a href="/networks">For Networks</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/acceptable-use">Acceptable Use</a>
+      <a href="/abuse">Report Abuse</a>
+      <a href="https://github.com/amiantos/lurker">Source</a>
+    </nav>
+    <p class="fineprint">Lurker by Brad Root · operated as a sole proprietorship · lurker.chat</p>
+  </div>
+</footer>
+
+</body>
+</html>

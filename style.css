@@ -74,12 +74,9 @@ a:hover { background: var(--accent); color: var(--accent-ink); border-color: var
 }
 .brand:hover { background: none; color: var(--ink); }
 .brand .mark {
-  font-size: 26px;
-  line-height: 1;
-  border: 2px solid var(--ink);
-  border-radius: 50%;
   width: 38px; height: 38px;
-  display: grid; place-items: center;
+  border-radius: 9px;
+  display: block;
 }
 .brand .wordmark {
   font-weight: 800;
@@ -114,6 +111,20 @@ a:hover { background: var(--accent); color: var(--accent-ink); border-color: var
   color: var(--ink);
 }
 .hero .actions { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ── product screenshot ───────────────────────────────────────────────────── */
+.shot { padding: 26px 0 8px; border-bottom: 1px solid var(--rule-soft); }
+.shot figure { margin: 0; }
+.shot .frame { border: 2px solid var(--ink); background: #14151a; line-height: 0; }
+.shot img { display: block; width: 100%; height: auto; }
+.shot figcaption {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-top: 9px;
+}
 
 /* ── buttons ──────────────────────────────────────────────────────────────── */
 .btn {
@@ -175,6 +186,7 @@ a:hover { background: var(--accent); color: var(--accent-ink); border-color: var
 .prose h1 { font-size: clamp(28px, 5vw, 40px); text-transform: uppercase; letter-spacing: -0.01em; margin: 0 0 6px; }
 .prose h2 { margin: 32px 0 8px; font-size: 20px; }
 .prose h2 .s { font-family: var(--mono); color: var(--accent); font-size: 14px; margin-right: 10px; }
+.prose h3 { margin: 20px 0 4px; font-size: 16px; font-weight: 700; }
 .prose p, .prose li { max-width: 70ch; }
 .prose ul { padding-left: 20px; }
 .prose li { margin: 4px 0; }

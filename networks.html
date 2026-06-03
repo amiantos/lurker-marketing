@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lurker — For Network Operators</title>
+<meta name="description" content="How Lurker connects to IRC networks, how to identify individual Lurker users via their verified ident, and how to ban one account without affecting others." />
+<link rel="stylesheet" href="/style.css" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png" />
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="/"><img class="mark" src="/img/lurker-icon-192.png" alt="Lurker" width="38" height="38" /><span class="wordmark">LURKER</span></a>
+    <p class="masthead-sub">For Network Operators</p>
+    <div class="docctl">
+      <span>Doc. LKR-NET</span><span>Rev. β</span><span>IRC Network Integration</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap prose">
+  <h1>For network operators</h1>
+  <p class="muted">You run an IRC network and want to know how Lurker connects, how to identify an
+    individual Lurker user, and how to ban one without affecting the rest. This page is for you.</p>
+
+  <h2><span class="s">1.0</span>How Lurker connects</h2>
+  <p>Each Lurker customer is hosted on a dedicated "cell" — a server with its own public IPv4 address
+    and reverse DNS under <code>lurker.chat</code> (for example, <code>roswell.lurker.chat</code>). A
+    single cell carries several users out of that one address. A connection whose reverse DNS is not
+    under <code>lurker.chat</code> is not from us.</p>
+
+  <h2><span class="s">2.0</span>Verified per-user idents</h2>
+  <p>Lurker runs a working identd (RFC 1413). Every outbound connection answers identd with a stable
+    ident unique to that user's account, of the form <code>u&lt;id&gt;</code> — for example,
+    <code>u1234</code>. Because identd vouches for it, the ident is verified — it appears with no
+    leading tilde. So a Lurker user looks like:</p>
+  <p><code>somenick!u1234@roswell.lurker.chat</code></p>
+  <p>The <code>u1234</code> part is the reliable handle for one human: it is the same for that account
+    everywhere, and it stays the same even if we move the account to a different cell.</p>
+
+  <h2><span class="s">3.0</span>Banning a single user</h2>
+  <p>Ban the verified ident, not the shared host:</p>
+  <p><code>/mode #channel +b *!u1234@*</code></p>
+  <p>This targets exactly one account — across nick changes and cell moves — and leaves other Lurker
+    users untouched. Banning the cell host on its own (<code>*!*@roswell.lurker.chat</code>) would
+    catch <em>everyone</em> on that cell, which is usually not what you want.</p>
+
+  <h2><span class="s">4.0</span>Connection limits</h2>
+  <p>Because a cell serves multiple users from one IP, strict per-IP connection or clone limits may
+    reject legitimate Lurker users. If you see that, consider raising the limit for
+    <code>lurker.chat</code> cell addresses — identd preserves per-user accountability, so you do not
+    lose the ability to act against an individual.</p>
+
+  <h2><span class="s">5.0</span>Abuse and contact</h2>
+  <p>If a Lurker user violates your network's rules, you can ban them as above and/or report them so
+    we can enforce our <a href="/acceptable-use">Acceptable Use Policy</a> against the account — see
+    <a href="/abuse">Report Abuse</a>. For technical questions or special arrangements, contact
+    <a href="mailto:networks@lurker.chat">networks@lurker.chat</a>.</p>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <nav>
+      <a href="/">Overview</a>
+      <a href="/about">About</a>
+      <a href="/faq">FAQ</a>
+      <a href="/networks">For Networks</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/acceptable-use">Acceptable Use</a>
+      <a href="/abuse">Report Abuse</a>
+      <a href="https://github.com/amiantos/lurker">Source</a>
+    </nav>
+    <p class="fineprint">Lurker by Brad Root · operated as a sole proprietorship · lurker.chat</p>
+  </div>
+</footer>
+
+</body>
+</html>

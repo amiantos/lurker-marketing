@@ -6,13 +6,17 @@
 <title>Lurker — Privacy Policy</title>
 <meta name="robots" content="index" />
 <link rel="stylesheet" href="/style.css" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png" />
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
 </head>
 <body>
 
 <header class="masthead">
   <div class="wrap">
-    <a class="brand" href="/"><span class="mark">⊕</span><span class="wordmark">LURKER</span></a>
-    <p class="masthead-sub">Operations Manual — Privacy Policy</p>
+    <a class="brand" href="/"><img class="mark" src="/img/lurker-icon-192.png" alt="Lurker" width="38" height="38" /><span class="wordmark">LURKER</span></a>
+    <p class="masthead-sub">Privacy Policy</p>
     <div class="docctl">
       <span>Doc. LKR-PRV</span><span>Rev. β</span><span>Effective: [EFFECTIVE DATE]</span>
     </div>
@@ -24,16 +28,13 @@
   <p class="muted">How the hosted Lurker service at lurker.chat collects, uses, and protects your
     information. The self-hosted edition runs on your own infrastructure and is not covered here.</p>
 
-  <p class="notice">DRAFT — not legal advice. Review with a qualified attorney before lurker.chat
-    accepts real users.</p>
-
   <h2><span class="s">1.0</span>Scope</h2>
   <p>This policy applies to the hosted Lurker service operated by Brad Root, a sole proprietor. By
     using the service you agree to this policy.</p>
 
   <h2><span class="s">2.0</span>What we collect</h2>
   <ul>
-    <li><strong>Account data</strong> — your email address and a hashed (never plaintext) password.</li>
+    <li><strong>Account data</strong> — your email address and a password, stored only as a salted scrypt hash (never plaintext).</li>
     <li><strong>Service data</strong> — the messages, channels, and history you send and receive
       through Lurker, and the IRC network connection details you configure (server addresses,
       nicknames, and any network credentials you choose to store). This is stored so the service can
@@ -65,6 +66,19 @@
     to encrypted object storage for backup and disaster recovery. We use reputable infrastructure
     providers (currently DigitalOcean for compute and Cloudflare for edge, DNS, and object storage)
     who process data on our behalf.</p>
+  <h3>Network credentials</h3>
+  <p>To act as an always-on bouncer, Lurker has to reconnect to your IRC networks while you are
+    away — so any server or NickServ passwords you ask it to store cannot be one-way hashed. They
+    are held under reversible encryption with a per-account key and decrypted only at the moment
+    they are sent to the network. Don't store credentials you aren't comfortable being stored this
+    way.</p>
+  <h3>IRC connection security</h3>
+  <p>The connection between you and Lurker is encrypted. The connection between Lurker and a given
+    IRC network depends on that network — some support TLS and some don't — and the network and the
+    other users in your channels receive whatever you send them. Treat IRC as a public medium:
+    don't send anything sensitive over a network you don't trust, and prefer networks that offer
+    TLS. Note that credentials a server sends back to you (for example in response to
+    <code>/oper</code>) can be captured in your stored message history.</p>
 
   <h2><span class="s">6.0</span>Who we share it with</h2>
   <ul>
@@ -81,9 +95,9 @@
   <p>We keep your data while your account is active. When you close your account, we hard-delete
     your cell-side data (your messages, channels, and stored connection details) and anonymize your
     account record — your email is released so it is free to register again, and your former account
-    identifier is retired rather than reused. Backups that may still contain your data age out on a
-    rolling schedule. We may retain limited records where required for legal, tax, or
-    fraud-prevention purposes.</p>
+    identifier is retired rather than reused. Backup copies that may still contain your data roll off
+    our encrypted backup storage within 30 days. We may retain limited records where required for
+    legal, tax, or fraud-prevention purposes.</p>
 
   <h2><span class="s">8.0</span>Your rights</h2>
   <p>You can access and export your data, correct your account information, and delete your account
@@ -108,9 +122,13 @@
   <div class="wrap">
     <nav>
       <a href="/">Overview</a>
+      <a href="/about">About</a>
+      <a href="/faq">FAQ</a>
+      <a href="/networks">For Networks</a>
       <a href="/terms">Terms of Service</a>
       <a href="/privacy">Privacy</a>
       <a href="/acceptable-use">Acceptable Use</a>
+      <a href="/abuse">Report Abuse</a>
       <a href="https://github.com/amiantos/lurker">Source</a>
     </nav>
     <p class="fineprint">Lurker by Brad Root · operated as a sole proprietorship · lurker.chat</p>

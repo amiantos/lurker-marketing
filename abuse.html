@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lurker — Report Abuse</title>
+<meta name="description" content="How to report an abusive Lurker user, and how to ban a single Lurker account by its verified ident." />
+<link rel="stylesheet" href="/style.css" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png" />
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="/"><img class="mark" src="/img/lurker-icon-192.png" alt="Lurker" width="38" height="38" /><span class="wordmark">LURKER</span></a>
+    <p class="masthead-sub">Report Abuse</p>
+    <div class="docctl">
+      <span>Doc. LKR-ABU</span><span>Rev. β</span><span>abuse@lurker.chat</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap prose">
+  <h1>Report abuse</h1>
+  <p class="muted">Lurker carries its users onto independent, third-party IRC networks. If a Lurker
+    user is abusing your network, your channel, or you, here is how to handle it.</p>
+
+  <h2><span class="s">1.0</span>You can act yourself first</h2>
+  <p>For a one-off, the fastest fix is a ban. Lurker users carry a verified, per-account ident of the
+    form <code>u&lt;id&gt;</code> (see <a href="/networks">For Network Operators</a>), so you can ban a
+    single account cleanly and durably:</p>
+  <p><code>*!u1234@*</code></p>
+  <p>This holds across nick changes and cell moves and affects no one else. Network and channel
+    services handle nick or channel squatting; a client-side <code>/ignore</code> handles noise you'd
+    simply rather not see. You don't need us for those.</p>
+
+  <h2><span class="s">2.0</span>When to report to us</h2>
+  <p>Email <a href="mailto:abuse@lurker.chat">abuse@lurker.chat</a> when a Lurker user is evading bans
+    across your network, engaging in sustained harassment or threats, distributing illegal content,
+    spamming, or attacking infrastructure. These violate our
+    <a href="/acceptable-use">Acceptable Use Policy</a>, and we will act against the account itself —
+    not just the connection.</p>
+
+  <h2><span class="s">3.0</span>How to report</h2>
+  <p>Include as much of the following as you can — precision speeds everything up:</p>
+  <ul>
+    <li>the user's verified ident (the <code>u&lt;id&gt;</code>), plus the nick(s) and host(s) used;</li>
+    <li>the network and channel where it happened;</li>
+    <li>the date and time — <strong>include your timezone</strong>;</li>
+    <li>logs or other supporting evidence.</li>
+  </ul>
+
+  <h2><span class="s">4.0</span>What we'll do</h2>
+  <p>We investigate against the Acceptable Use Policy and warn, suspend, or terminate the account as
+    warranted. For severe cases — illegal content, credible threats, or active attacks — we act
+    immediately and preserve relevant records. To protect our users' privacy, we will not disclose
+    the reported user's email address, IP address, or other personal information.</p>
+
+  <h2><span class="s">5.0</span>Illegal content and emergencies</h2>
+  <p>Child sexual abuse material (CSAM), credible threats of violence, and similar emergencies are
+    handled with zero tolerance and escalated to the appropriate authorities. Report them to
+    <a href="mailto:abuse@lurker.chat">abuse@lurker.chat</a>; if there is an immediate danger to life,
+    contact your local emergency services first.</p>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <nav>
+      <a href="/">Overview</a>
+      <a href="/about">About</a>
+      <a href="/faq">FAQ</a>
+      <a href="/networks">For Networks</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/acceptable-use">Acceptable Use</a>
+      <a href="/abuse">Report Abuse</a>
+      <a href="https://github.com/amiantos/lurker">Source</a>
+    </nav>
+    <p class="fineprint">Lurker by Brad Root · operated as a sole proprietorship · lurker.chat</p>
+  </div>
+</footer>
+
+</body>
+</html>
