@@ -1,0 +1,7 @@
+# Cloudflare Pages — baseline security headers for the static marketing site.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Content-Security-Policy: default-src 'self'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'self' mailto:; frame-ancestors 'none'

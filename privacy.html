@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lurker — Privacy Policy</title>
+<meta name="robots" content="index" />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="mark">⊕</span><span class="wordmark">LURKER</span></a>
+    <p class="masthead-sub">Operations Manual — Privacy Policy</p>
+    <div class="docctl">
+      <span>Doc. LKR-PRV</span><span>Rev. β</span><span>Effective: [EFFECTIVE DATE]</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap prose">
+  <h1>Privacy Policy</h1>
+  <p class="muted">How the hosted Lurker service at lurker.chat collects, uses, and protects your
+    information. The self-hosted edition runs on your own infrastructure and is not covered here.</p>
+
+  <p class="notice">DRAFT — not legal advice. Review with a qualified attorney before lurker.chat
+    accepts real users.</p>
+
+  <h2><span class="s">1.0</span>Scope</h2>
+  <p>This policy applies to the hosted Lurker service operated by Brad Root, a sole proprietor. By
+    using the service you agree to this policy.</p>
+
+  <h2><span class="s">2.0</span>What we collect</h2>
+  <ul>
+    <li><strong>Account data</strong> — your email address and a hashed (never plaintext) password.</li>
+    <li><strong>Service data</strong> — the messages, channels, and history you send and receive
+      through Lurker, and the IRC network connection details you configure (server addresses,
+      nicknames, and any network credentials you choose to store). This is stored so the service can
+      function as an always-on bouncer.</li>
+    <li><strong>Technical data</strong> — IP addresses, timestamps, and operational logs needed to
+      run, secure, and debug the service.</li>
+    <li><strong>Payment data</strong> — when paid plans launch, billing is handled by Stripe. Stripe
+      holds your card details; we receive only limited information such as your subscription status
+      and the last digits of your card.</li>
+  </ul>
+
+  <h2><span class="s">3.0</span>How we use it</h2>
+  <p>We use your information solely to provide and operate the service: to maintain your
+    connections, store and sync your history, authenticate you, process payments, provide support,
+    keep the service secure, and comply with the law. <strong>We do not sell your data, and we do
+    not use the content of your messages for advertising or profiling.</strong></p>
+
+  <h2><span class="s">4.0</span>Access to your messages</h2>
+  <p>Your message history is stored to operate the bouncer. We do not read it as a matter of course.
+    Our staff may access it only when necessary to operate or repair the service, to investigate a
+    suspected violation of the <a href="/acceptable-use">Acceptable Use Policy</a>, or to comply
+    with a valid legal requirement. Note that the IRC networks you connect to — and the other users
+    in your channels — necessarily receive the traffic you send to them; that is how IRC works, and
+    it is outside our control.</p>
+
+  <h2><span class="s">5.0</span>Where your data lives</h2>
+  <p>Your account is assigned to a dedicated "cell" — a server instance that holds your data. Data
+    is transmitted to and from the service over encrypted (TLS) connections. We replicate cell data
+    to encrypted object storage for backup and disaster recovery. We use reputable infrastructure
+    providers (currently DigitalOcean for compute and Cloudflare for edge, DNS, and object storage)
+    who process data on our behalf.</p>
+
+  <h2><span class="s">6.0</span>Who we share it with</h2>
+  <ul>
+    <li><strong>Service providers</strong> — infrastructure (DigitalOcean, Cloudflare) and payments
+      (Stripe), acting on our instructions to run the service.</li>
+    <li><strong>IRC networks</strong> — the third-party networks you connect to receive the traffic
+      you direct to them. They have their own policies; we are not responsible for them.</li>
+    <li><strong>Legal</strong> — where we reasonably believe disclosure is required by law or
+      necessary to protect the rights, safety, or property of users, the public, or us.</li>
+  </ul>
+  <p>We do not sell or rent your personal information to anyone.</p>
+
+  <h2><span class="s">7.0</span>Retention and deletion</h2>
+  <p>We keep your data while your account is active. When you close your account, we hard-delete
+    your cell-side data (your messages, channels, and stored connection details) and anonymize your
+    account record — your email is released so it is free to register again, and your former account
+    identifier is retired rather than reused. Backups that may still contain your data age out on a
+    rolling schedule. We may retain limited records where required for legal, tax, or
+    fraud-prevention purposes.</p>
+
+  <h2><span class="s">8.0</span>Your rights</h2>
+  <p>You can access and export your data, correct your account information, and delete your account
+    at any time from within the service. Depending on where you live, you may have additional rights
+    (such as under the California Consumer Privacy Act or the GDPR), including the right to know what
+    we hold and to request deletion. To exercise any right, contact us at the address below. We do
+    not discriminate against you for exercising your rights.</p>
+
+  <h2><span class="s">9.0</span>Children</h2>
+  <p>The service is not directed to children under 16, and we do not knowingly collect their data.
+    If you believe a child has provided us information, contact us and we will delete it.</p>
+
+  <h2><span class="s">10.0</span>Changes</h2>
+  <p>We may update this policy. Material changes will be communicated by email or an in-app notice,
+    and the effective date above will be updated.</p>
+
+  <h2><span class="s">11.0</span>Contact</h2>
+  <p>Privacy questions or requests: <a href="mailto:privacy@lurker.chat">privacy@lurker.chat</a>.</p>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <nav>
+      <a href="/">Overview</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/acceptable-use">Acceptable Use</a>
+      <a href="https://github.com/amiantos/lurker">Source</a>
+    </nav>
+    <p class="fineprint">Lurker by Brad Root · operated as a sole proprietorship · lurker.chat</p>
+  </div>
+</footer>
+
+</body>
+</html>
