@@ -52,20 +52,29 @@
     keep the service secure, and comply with the law. <strong>We do not sell your data, and we do
     not use the content of your messages for advertising or profiling.</strong></p>
 
-  <h2><span class="s">4.0</span>Access to your messages</h2>
+  <h2><span class="s">4.0</span>Access to your messages and uploads</h2>
   <p>Your message history is stored to operate the bouncer. We do not read it as a matter of course.
     Our staff may access it only when necessary to operate or repair the service, to investigate a
     suspected violation of the <a href="/acceptable-use">Acceptable Use Policy</a>, or to comply
     with a valid legal requirement. Note that the IRC networks you connect to — and the other users
     in your channels — necessarily receive the traffic you send to them; that is how IRC works, and
     it is outside our control.</p>
+  <h3>Uploads</h3>
+  <p>Files you upload through the web app (images, and longer messages posted as a text file) are
+    stored as objects on our infrastructure and served from our content-delivery domain. Because
+    they live in our storage and are served under our name, we are able to — and, to comply with the
+    law and enforce the <a href="/acceptable-use">Acceptable Use Policy</a>, sometimes must — review
+    them: an operator can browse uploaded files and remove any that violate our policies or the law,
+    and such removals are logged. As with your message history, we do not browse your uploads as a
+    matter of course.</p>
 
   <h2><span class="s">5.0</span>Where your data lives</h2>
   <p>Your account is assigned to a dedicated "cell" — a server instance that holds your data. Data
     is transmitted to and from the service over encrypted (TLS) connections. We replicate cell data
-    to encrypted object storage for backup and disaster recovery. We use reputable infrastructure
-    providers (currently DigitalOcean for compute and Cloudflare for edge, DNS, and object storage)
-    who process data on our behalf.</p>
+    to encrypted object storage for backup and disaster recovery. Files you upload through the web
+    app are stored as objects in that same object storage and served from our CDN. We use reputable
+    infrastructure providers (currently DigitalOcean for compute and Cloudflare for edge, DNS, and
+    object storage) who process data on our behalf.</p>
   <h3>Network credentials</h3>
   <p>To act as an always-on bouncer, Lurker has to reconnect to your IRC networks while you are
     away — so any server, NickServ, or SASL passwords you ask it to store cannot be one-way hashed;
