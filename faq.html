@@ -56,9 +56,12 @@
   <h3>How are my network passwords stored?</h3>
   <p>Your Lurker account password is a one-way <strong>scrypt</strong> hash — we can't read it.
     Network credentials are different: any server, NickServ, or SASL password you save has to be
-    replayed to the network to reconnect you, so it can't be hashed. Those are stored on your cell
-    in recoverable form (not encrypted at rest today), so only save network credentials you're
-    comfortable having stored that way. See the <a href="/privacy">Privacy Policy</a>.</p>
+    replayed to the network to reconnect you, so it can't be one-way hashed. Those are
+    <strong>encrypted at rest</strong> (AES-256-GCM), with the key kept separate from the database
+    backups — so a stolen backup holds only ciphertext. But the service has to decrypt them to
+    reconnect you, so this isn't zero-knowledge: treat them as recoverable by the service, and only
+    save network credentials you're comfortable having stored that way. See the
+    <a href="/privacy">Privacy Policy</a>.</p>
 
   <h3>Is my conversation private?</h3>
   <p>Your connection to Lurker is encrypted, but IRC itself is a public medium — the networks and the
