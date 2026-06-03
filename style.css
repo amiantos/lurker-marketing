@@ -204,6 +204,33 @@ a:hover { background: var(--accent); color: var(--accent-ink); border-color: var
   margin-top: 8px;
 }
 .callout h2 { margin-top: 0; }
+.callout .emaildirect { margin: 16px 0 0; font-size: 15px; color: var(--ink-2); }
+/* one click selects the whole address — easy copy into webmail, no JS */
+.email {
+  font-family: var(--mono);
+  font-weight: 600;
+  color: var(--ink);
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: all;
+  user-select: all;
+}
+.email.copied::after {
+  content: 'Copied';
+  position: absolute;
+  left: 50%;
+  bottom: 145%;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+}
 
 /* legal / prose pages */
 .prose { padding: 40px 0 8px; }
