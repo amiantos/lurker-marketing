@@ -36,16 +36,16 @@
 
   <h2><span class="s">2.0</span>Verified per-user idents</h2>
   <p>Lurker runs a working identd (RFC 1413). Every outbound connection answers identd with a stable
-    ident unique to that user's account, of the form <code>u&lt;id&gt;</code> — for example,
-    <code>u1234</code>. Because identd vouches for it, the ident is verified — it appears with no
-    leading tilde. So a Lurker user looks like:</p>
-  <p><code>somenick!u1234@roswell.lurker.chat</code></p>
-  <p>The <code>u1234</code> part is the reliable handle for one human: it is the same for that account
+    ident unique to that user's account, of the form <code>lu&lt;id&gt;</code> ("lu" for Lurker user)
+    — for example, <code>lu1234</code>. Because identd vouches for it, the ident is verified — it
+    appears with no leading tilde. So a Lurker user looks like:</p>
+  <p><code>somenick!lu1234@roswell.lurker.chat</code></p>
+  <p>The <code>lu1234</code> part is the reliable handle for one human: it is the same for that account
     everywhere, and it stays the same even if we move the account to a different cell.</p>
 
   <h2><span class="s">3.0</span>Banning a single user</h2>
   <p>Ban the verified ident, not the shared host:</p>
-  <p><code>/mode #channel +b *!u1234@*</code></p>
+  <p><code>/mode #channel +b *!lu1234@*</code></p>
   <p>This targets exactly one account — across nick changes and cell moves — and leaves other Lurker
     users untouched. Banning the cell host on its own (<code>*!*@roswell.lurker.chat</code>) would
     catch <em>everyone</em> on that cell, which is usually not what you want.</p>
