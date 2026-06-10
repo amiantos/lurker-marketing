@@ -196,6 +196,19 @@ a:hover { background: var(--accent); color: var(--accent-ink); border-color: var
 .specs .cell h4 { margin: 6px 0 4px; font-size: 15px; }
 .specs .cell p { margin: 0; font-size: 14px; color: var(--ink-2); }
 
+/* pricing strip — attaches flush under a specs box, like a stamped total line */
+.section .price {
+  margin: 0;
+  max-width: none;
+  border: 1px solid var(--ink);
+  border-top: 0;
+  background: var(--paper-2);
+  padding: 14px 18px;
+  font-size: 15px;
+  color: var(--ink-2);
+}
+.price strong { color: var(--ink); }
+
 /* request-access callout box */
 .callout {
   border: 2px solid var(--ink);
