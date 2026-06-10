@@ -16,7 +16,7 @@
 <header class="masthead">
   <div class="wrap">
     <a class="brand" href="/"><img class="mark" src="/img/lurker-icon-192.png" alt="Lurker" width="38" height="38" /><span class="wordmark">LURKER</span></a>
-    <p class="masthead-sub">Privacy Policy</p>
+    <p class="masthead-sub">An IRC Client That's Out of This World</p>
     <div class="docctl">
       <span>Doc. LKR-PRV</span><span>Rev. 1.0</span><span>Effective: June 9, 2026</span>
     </div>
@@ -34,8 +34,8 @@
 
   <h2><span class="s">2.0</span>What we collect</h2>
   <ul>
-    <li><strong>Account data</strong> — your email address and a password, stored only as a salted scrypt hash (never plaintext).</li>
-    <li><strong>Service data</strong> — the messages, channels, and history you send and receive
+    <li><strong>Account data</strong> — your email address; and a password, stored as a secured hash.</li>
+    <li><strong>Service data</strong> — the messages you send and receive
       through Lurker, and the IRC network connection details you configure (server addresses,
       nicknames, and any network credentials you choose to store). This is stored so the service can
       function as an always-on bouncer.</li>
@@ -43,7 +43,7 @@
       run, secure, and debug the service.</li>
     <li><strong>Payment data</strong> — when paid plans launch, billing is handled by Stripe. Stripe
       holds your card details; we receive only limited information such as your subscription status
-      and the last digits of your card.</li>
+      to determine your account is active. No billing details are stored on our servers.</li>
   </ul>
 
   <h2><span class="s">3.0</span>How we use it</h2>
@@ -54,9 +54,8 @@
 
   <h2><span class="s">4.0</span>Access to your messages and uploads</h2>
   <p>Your message history is stored to operate the bouncer. We do not read it as a matter of course.
-    Our staff may access it only when necessary to operate or repair the service, to investigate a
-    suspected violation of the <a href="/acceptable-use">Acceptable Use Policy</a>, or to comply
-    with a valid legal requirement. Note that the IRC networks you connect to — and the other users
+    It is only stored in Lurker to be retrieved and searched by you. 
+    Note that the IRC networks you connect to — and the other users
     in your channels — necessarily receive the traffic you send to them; that is how IRC works, and
     it is outside our control.</p>
   <h3>Uploads</h3>
@@ -72,7 +71,7 @@
   <p>Your account is assigned to a dedicated "cell" — a server instance that holds your data. Data
     is transmitted to and from the service over encrypted (TLS) connections. We replicate cell data
     to encrypted object storage for backup and disaster recovery. Files you upload through the web
-    app are stored as objects in that same object storage and served from our CDN. We use reputable
+    app are stored as objects in separate object storage and served from our CDN. We use reputable
     infrastructure providers (currently DigitalOcean for compute and Cloudflare for edge, DNS, and
     object storage) who process data on our behalf.</p>
   <h3>Network credentials</h3>
@@ -147,6 +146,9 @@
     <p class="fineprint">Lurker by Brad Root · lurker.chat</p>
   </div>
 </footer>
+
+<!-- 100% privacy-first analytics -->
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 
 </body>
 </html>

@@ -16,7 +16,7 @@
 <header class="masthead">
   <div class="wrap">
     <a class="brand" href="/"><img class="mark" src="/img/lurker-icon-192.png" alt="Lurker" width="38" height="38" /><span class="wordmark">LURKER</span></a>
-    <p class="masthead-sub">For Network Operators</p>
+    <p class="masthead-sub">An IRC Client That's Out of This World</p>
     <div class="docctl">
       <span>Doc. LKR-NET</span><span>Rev. 1.0</span><span>IRC Network Integration</span>
     </div>
@@ -29,7 +29,7 @@
     individual Lurker user, and how to ban one without affecting the rest. This page is for you.</p>
 
   <h2><span class="s">1.0</span>How Lurker connects</h2>
-  <p>Each Lurker customer is hosted on a dedicated "cell" — a server with its own public IPv4 address
+  <p>A Lurker user is hosted on a dedicated "cell" — a server with its own public IPv4 address
     and reverse DNS under <code>lurker.chat</code> (for example, <code>roswell.lurker.chat</code>). A
     single cell carries several users out of that one address. A connection whose reverse DNS is not
     under <code>lurker.chat</code> is not from us.</p>
@@ -41,11 +41,11 @@
     appears with no leading tilde. So a Lurker user looks like:</p>
   <p><code>somenick!lu1234@roswell.lurker.chat</code></p>
   <p>The <code>lu1234</code> part is the reliable handle for one human: it is the same for that account
-    everywhere, and it stays the same even if we move the account to a different cell.</p>
+    everywhere, and it stays the same even if we move the account to a different cell / hostname.</p>
 
   <h2><span class="s">3.0</span>Banning a single user</h2>
   <p>Ban the verified ident, not the shared host:</p>
-  <p><code>/mode #channel +b *!lu1234@*</code></p>
+  <p><code>/mode #channel +b *!lu1234@*.lurker.chat</code></p>
   <p>This targets exactly one account — across nick changes and cell moves — and leaves other Lurker
     users untouched. Banning the cell host on its own (<code>*!*@roswell.lurker.chat</code>) would
     catch <em>everyone</em> on that cell, which is usually not what you want.</p>
@@ -55,6 +55,8 @@
     reject legitimate Lurker users. If you see that, consider raising the limit for
     <code>lurker.chat</code> cell addresses — identd preserves per-user accountability, so you do not
     lose the ability to act against an individual.</p>
+  <p>Currently Lurker.Chat runs one cell, <code>roswell.lurker.chat</code>. We recommend whitelisting
+    by hostname rather than IP address, in case infrastructure upgrades necessitate IP changes in the future.</p>
 
   <h2><span class="s">5.0</span>Abuse and contact</h2>
   <p>If a Lurker user violates your network's rules, you can ban them as above and/or report them so
@@ -80,6 +82,9 @@
     <p class="fineprint">Lurker by Brad Root · lurker.chat</p>
   </div>
 </footer>
+
+<!-- 100% privacy-first analytics -->
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 
 </body>
 </html>
