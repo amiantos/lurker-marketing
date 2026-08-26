@@ -15,6 +15,7 @@
   --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
   --sans: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --maxw: 1040px;
+  --docw: 800px;
   --textw: 62ch;
 }
 
@@ -39,6 +40,9 @@ code {
 }
 
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+/* text pages: one narrow column for masthead, prose and footer alike, so the
+   reading measure is the page rather than a ragged left edge of a wide one */
+.doc .wrap { max-width: var(--docw); }
 
 a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(169, 157, 236, 0.4); }
 a:hover { border-bottom-color: currentColor; }
@@ -171,7 +175,7 @@ a:hover { border-bottom-color: currentColor; }
 .brand .wordmark { font-weight: 800; font-size: 22px; letter-spacing: 0.1em; }
 
 /* ── inner pages: prose ───────────────────────────────────────────────────── */
-.prose { padding: clamp(40px, 7vw, 72px) 0 24px; }
+.prose { padding: clamp(40px, 7vw, 72px) 24px 24px; } /* keep .wrap's side padding — the shorthand overrides it */
 .prose h1 {
   font-size: clamp(32px, 6vw, 52px);
   line-height: 1.02;
