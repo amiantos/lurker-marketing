@@ -100,9 +100,36 @@ a:hover { border-bottom-color: currentColor; }
 
 /* ── home: the two doors — self-host free, or hosted ──────────────────────── */
 .doors { padding: clamp(48px, 9vw, 96px) 0; border-top: 1px solid var(--rule); text-align: center; }
-.doors .actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+.doors .doors-lede { margin: 0 auto; max-width: 54ch; color: var(--fg-2); }
+.doors .actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin: 26px 0 0; }
 .doors .fineprint { margin: 26px auto 0; max-width: 56ch; }
-.doors .fineprint + .fineprint { margin-top: 8px; }
+
+/* the self-host one-liner: quiet, left-aligned, and scrolls on its own so the
+   long raw.githubusercontent URL can never widen the page */
+.cmd {
+  margin: 26px auto 0;
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+  text-align: left;
+  border: 1px solid var(--rule);
+  background: var(--bg-2);
+  padding: 14px 18px;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--fg-2);
+}
+.cmd code { font: inherit; color: inherit; }
+
+/* hosted account | tip jar */
+/* subgrid keeps copy / button / fineprint on shared rows, so the two CTAs stay
+   level even if one column's copy wraps to a different number of lines */
+.split { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto; gap: 20px 48px; max-width: 780px; margin: 0 auto; }
+.split > div { display: grid; grid-row: span 3; grid-template-rows: subgrid; align-content: start; }
+.split p { margin: 0 auto; max-width: 34ch; color: var(--fg-2); }
+.split p strong { color: var(--fg); }
+.split .fineprint { margin-top: 16px; max-width: 34ch; }
 
 .btn {
   display: inline-block;
@@ -173,4 +200,6 @@ a:hover { border-bottom-color: currentColor; }
 @media (max-width: 620px) {
   body { font-size: 16px; }
   .doors .actions .btn { width: 100%; }
+  .split { grid-template-columns: 1fr; grid-template-rows: none; gap: 36px; }
+  .split > div { grid-row: auto; grid-template-rows: none; }
 }
