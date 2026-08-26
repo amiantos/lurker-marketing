@@ -32,6 +32,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+code {
+  font-family: var(--mono);
+  color: var(--fg);
+  font-size: 0.8em;
+}
+
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
 a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(169, 157, 236, 0.4); }
@@ -125,11 +131,13 @@ a:hover { border-bottom-color: currentColor; }
 /* hosted account | tip jar */
 /* subgrid keeps copy / button / fineprint on shared rows, so the two CTAs stay
    level even if one column's copy wraps to a different number of lines */
-.split { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto; gap: 20px 48px; max-width: 780px; margin: 0 auto; }
-.split > div { display: grid; grid-row: span 3; grid-template-rows: subgrid; align-content: start; }
+.split { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 20px 48px; max-width: 780px; margin: 0 auto; }
+.split > div { display: grid; grid-row: span 2; grid-template-rows: subgrid; align-content: start; }
 .split p { margin: 0 auto; max-width: 34ch; color: var(--fg-2); }
 .split p strong { color: var(--fg); }
-.split .fineprint { margin-top: 16px; max-width: 34ch; }
+/* the 34ch measure is for the copy only — it must not cage the button row, or
+   the full-width mobile .btn goes full-width of 34ch instead of the column */
+.split .actions { max-width: none; }
 
 .btn {
   display: inline-block;
