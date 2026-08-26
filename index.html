@@ -3,11 +3,14 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lurker — always-on IRC</title>
-<meta name="description" content="Lurker is a modern, always-on IRC client and bouncer. Stay connected to your channels and keep your history — self-host it free, or let us run it for you at lurker.chat." />
-<meta property="og:title" content="Lurker — always-on IRC" />
-<meta property="og:description" content="A modern, always-on IRC client and bouncer. Self-host it free, or let us run it for you." />
+<title>Lurker — a beautiful IRC client</title>
+<meta name="description" content="Lurker is a beautiful, always-on IRC client with a retro aesthetic and modern conveniences. Self-host it free, or let us run it for you at lurker.chat." />
+<meta property="og:title" content="Lurker" />
+<meta property="og:description" content="A beautiful, always-on IRC client with a retro aesthetic and modern conveniences." />
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://lurker.chat/" />
+<meta property="og:image" content="https://lurker.chat/img/screenshot.png" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="stylesheet" href="/style.css" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
@@ -16,132 +19,72 @@
 </head>
 <body>
 
-<header class="masthead">
-  <div class="wrap">
-    <a class="brand" href="/"><img class="mark" src="/img/lurker-icon-192.png" alt="Lurker" width="38" height="38" /><span class="wordmark">LURKER</span></a>
-    <p class="masthead-sub">An IRC Client That's Out of This World</p>
-    <div class="docctl">
-      <span>Doc. LKR-001</span><span>Rev. 1.0</span><span>Classification: Unrestricted</span>
-    </div>
-  </div>
-</header>
-
 <main class="wrap">
 
   <section class="hero">
-    <h1>You were never not&nbsp;here.</h1>
-    <p class="lede">Lurker is a modern, always-on IRC client and bouncer. Your channels stay
-      connected and your history stays with you — even with every window closed. Self-host it
-      for free, or let us run it for you.</p>
-    <p class="lede">Tired of using centralized chat platforms that ask for money, then show you ads anyway? Come back to where it all began. Your friends, both new and old, are waiting for you... on IRC.</p>
-    <div class="actions">
-      <a class="btn primary" href="#access">Get started</a>
-      <a class="btn" href="https://github.com/amiantos/lurker">Self-host it free</a>
-    </div>
+    <h1>Lurker</h1>
+    <p class="lede">A beautiful, always-on IRC client with a retro aesthetic and modern conveniences.</p>
   </section>
 
-  <section class="shot">
-    <figure>
-      <a class="shot-thumb" href="#fig1" aria-label="Enlarge the Lurker screenshot"><img src="/img/screenshot.png" alt="The Lurker IRC client: a channel list, an active conversation, and a member list in a dark interface." /></a>
-      <figcaption>Fig. 1 — Lurker client · click to enlarge</figcaption>
+  <section class="shots">
+    <figure class="shot">
+      <a href="#fig1" aria-label="Enlarge the Lurker screenshot"><img src="/img/screenshot.png" alt="The Lurker web client: a network and channel list, an active conversation, and a member list in a dark retro terminal interface." width="1649" height="1111" /></a>
+    </figure>
+    <figure class="shot">
+      <a href="#fig2" aria-label="Enlarge the Lurker for iOS screenshots"><img src="/img/ios-screenshot.png" alt="Lurker for iOS: the buffer list, a channel conversation, bookmarks, and message search." width="1289" height="695" loading="lazy" /></a>
     </figure>
   </section>
 
-  <section class="section">
-    <p class="eyebrow"><b>02</b> &nbsp;/&nbsp; Overview</p>
-    <h2>Presence confirmed.</h2>
-    <p>Old IRC went dark the moment you closed the window. Lurker doesn't. It holds your
-      connection open, captures everything said while you were away, and hands it back the next
-      time you look — on any web browser. A clean modern
-      interface in support of a protocol that has outlasted everything sent to replace it.</p>
-    <div class="specs">
-      <div class="cell"><span class="n">A·1</span><h4>Always connected</h4><p>Lurker keeps you connected, even if your own internet connection can be flaky.</p></div>
-      <div class="cell"><span class="n">A·2</span><h4>Full history</h4><p>Whether you're online or away, Lurker captures everything said in your channels and makes it available when you return.</p></div>
-      <div class="cell"><span class="n">A·3</span><h4>Modern client</h4><p>A fast web app bringing modern features to IRC — search, uploads, notifications, notes, drafts, smart nick autocomplete, and more.</p></div>
-      <div class="cell"><span class="n">A·4</span><h4>Your networks</h4><p>Connect to as many networks as you like, all from a single interface.</p></div>
-      <div class="cell"><span class="n">A·5</span><h4>Open source</h4><p>The client is free software. The hosted service runs the same code you can read in the repo.</p></div>
-      <div class="cell"><span class="n">A·6</span><h4>No lock-in</h4><p>Paying for Lurker.Chat? You can export your data and import it into any self-hosted instance and cancel your account. No hard feelings.</p></div>
-    </div>
+  <section class="features">
+    <h2>Features</h2>
+    <ul>
+      <li><b>Always-on and multi-user.</b> Each invited user connects to their own set of IRC networks, and Lurker stays connected when they're away. Admins can restrict which networks users can connect to, and make channel recommendations for newcomers.</li>
+      <li><b>Fully working search.</b> Search your message history, filter by nick, channel, or network; and jump to any message instantly, no matter how old it is.</li>
+      <li><b>Modern conveniences.</b> Peer presence, automatic nick regain, join/part summarization, tab nickname completion, message drafts, saved messages, user notes, inline link and media previews, and more.</li>
+      <li><b>Image uploads.</b> Paste an image into the input box, and Lurker optimizes it, sanitizes it, and uploads it to local storage, S3, Zipline, Chibisafe, or external services like x0.at or catbox.moe.</li>
+      <li><b>Customizable UI.</b> The beautiful retro terminal-style PWA interface has 40+ settings to customize it how you want.</li>
+      <li><b>Native apps.</b> Lurker has official native apps <a href="https://github.com/amiantos/lurker-ios">for iOS</a> (in beta) and Android (coming soon). There's also third party clients like <a href="https://github.com/JawshTheDark/lurker-android-upstream">Spooky</a> (Android) and <a href="https://github.com/JawshTheDark/scully">Scully</a> (PC).</li>
+      <li><b>Built-in soju-compatible bouncer.</b> Don't want to use the Lurker clients? Then don't. Lurker has a ZNC and soju-compatible bouncer built in, complete with <code>soju.im/bouncer-networks</code> support, so you can use any client you want.</li>
+    </ul>
   </section>
 
-  <section class="section">
-    <p class="eyebrow"><b>03</b> &nbsp;/&nbsp; Self-hosted edition</p>
-    <h2>Run it yourself. Forever. Free.</h2>
-    <p>Lurker is open source and will stay maintained as a self-hosted application for as long as
-      it exists. One container on a small box you control; with all the features.
-      If you'd rather own the hardware, that path is first-class — not a crippled trial.</p>
-    <p><a href="https://github.com/amiantos/lurker">Read the source and deploy guide →</a></p>
-  </section>
-
-  <section class="section">
-    <p class="eyebrow"><b>04</b> &nbsp;/&nbsp; Hosted service — lurker.chat</p>
-    <h2>Or let us run it.</h2>
-    <p>The hosted service is the same software, run for you. No server to stand up, no upgrades to
-      babysit, no backups to remember — we handle the machine so you can just sign up and start
-      talking.</p>
-    <div class="specs">
-      <div class="cell"><span class="n">C·1</span><h4>Nothing to manage</h4><p>No server, no Docker, no security alerts, no upgrades. You sign up and you're connected — the machine and security is our problem, not yours.</p></div>
-      <div class="cell"><span class="n">C·2</span><h4>Image hosting</h4><p>Lurker.Chat includes built-in image & text file hosting, so you can share images and large pastes directly in your channels without relying on third-party services.</p></div>
-      <div class="cell"><span class="n">C·3</span><h4>History kept safe</h4><p>Everything in your account is backed up off-site, continuously, and protected by modern security best practices.</p></div>
-    </div>
-    <p class="price"><strong>$5/month per user.</strong> 14-day money-back guarantee, then it renews
-      monthly until you cancel — cancelling is one click. <a href="/refunds">Refund policy →</a></p>
-  </section>
-
-  <section class="section" id="access">
-    <div class="callout">
-      <p class="eyebrow"><b>05</b> &nbsp;/&nbsp; Get started</p>
-      <h2>Sign up and start talking.</h2>
-      <p>Create your account and you're connected in minutes.
-        <strong>$5/month</strong> per user, with a 14-day money-back guarantee; cancel any time in one click.
-        Prefer to run it yourself? The open-source edition is free, forever.</p>
-      <p class="actions" style="margin-top:20px">
-        <a class="btn primary" href="https://app.lurker.chat/signup">Sign up →</a>
-        <a class="btn" href="https://github.com/amiantos/lurker">Self-host instead</a>
-      </p>
-      <p class="signin">Already have an account? <a href="https://app.lurker.chat/login">Sign in →</a></p>
-    </div>
-  </section>
-
-  <section class="section">
-    <p class="eyebrow"><b>06</b> &nbsp;/&nbsp; Tip jar</p>
-    <h2>Support Lurker.</h2>
-    <p>If Lurker has earned a place in your homelab setup and you'd like to help keep development
-      going, you can leave a tip. It all goes straight back into the project, and it means a lot.</p>
-    <p class="actions" style="margin-top:20px">
-      <a class="btn primary" href="https://buy.stripe.com/bJe00lfnN3HO3a920e3sI00">Leave a tip →</a>
+  <section class="doors" id="get-started">
+    <h2>Get Lurker</h2>
+    <p class="actions">
+      <a class="btn" href="https://github.com/amiantos/lurker">Self-host it free</a>
+      <a class="btn primary" href="https://app.lurker.chat/signup">Hosted — $5/mo →</a>
     </p>
+    <p class="fineprint">Lurker is open source (MPL-2.0) and free to run on your own box, forever.
+      Or let us run it: $5/month per user, 14-day money-back guarantee, cancel in one click.
+      <a href="/refunds">Refund policy</a>.</p>
+    <p class="fineprint">Already have an account? <a href="https://app.lurker.chat/login">Sign in</a>.</p>
   </section>
 
 </main>
 
 <footer class="footer">
   <div class="wrap">
-    <div class="docctl">
-      <span>Lurker by Brad Root</span><span>lurker.chat</span><span>Rev. 1.0 · 2026</span>
-    </div>
     <nav>
-      <a href="/">Overview</a>
       <a href="/about">About</a>
       <a href="/faq">FAQ</a>
+      <a href="https://docs.lurker.chat">Docs</a>
+      <a href="https://github.com/amiantos/lurker">Source</a>
       <a href="/networks">For Networks</a>
       <a href="https://buy.stripe.com/bJe00lfnN3HO3a920e3sI00">Tip jar</a>
-      <a href="/terms">Terms of Service</a>
+      <a href="/terms">Terms</a>
       <a href="/privacy">Privacy</a>
       <a href="/acceptable-use">Acceptable Use</a>
       <a href="/refunds">Refunds</a>
       <a href="/abuse">Report Abuse</a>
-      <a href="https://github.com/amiantos/lurker">Source</a>
     </nav>
-    <p class="fineprint">Lurker connects you to independent, third-party IRC networks; it is not
-      affiliated with, and does not operate, any of them. Self-host the open-source edition, or
-      use the hosted service at your discretion.</p>
+    <p class="fineprint">Lurker by Brad Root · lurker.chat · 2026 · Lurker connects you to independent,
+      third-party IRC networks; it is not affiliated with, and does not operate, any of them.</p>
   </div>
 </footer>
 
 <a href="#_" id="fig1" class="lightbox" aria-label="Close enlarged screenshot"><img src="/img/screenshot.png" alt="" /></a>
+<a href="#_" id="fig2" class="lightbox" aria-label="Close enlarged screenshot"><img src="/img/ios-screenshot.png" alt="" /></a>
 
-<script src="/js/copy.js" defer></script>
 <!-- 100% privacy-first analytics -->
 <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 
