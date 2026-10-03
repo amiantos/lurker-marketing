@@ -74,6 +74,17 @@ a:hover { border-bottom-color: currentColor; }
 .shot a, .shot img { display: block; }
 .shot a { border: 0; line-height: 0; cursor: zoom-in; }
 .shot img { width: 100%; height: auto; }
+.shot figcaption {
+  margin-top: -2px;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+}
+/* the macOS window shot carries its drop shadow as transparent padding */
+.shot-desktop figcaption { margin-top: -22px; }
 
 /* full-size overlay — shown only while its id is the URL :target */
 .lightbox {

@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lurker — a beautiful IRC client</title>
-<meta name="description" content="Lurker is a beautiful, always-on IRC client with a retro aesthetic and modern conveniences. Self-host it free, or let us run it for you at lurker.chat." />
+<title>Lurker — a delightful IRC bouncer and client</title>
+<meta name="description" content="Lurker is a delightful, always-on IRC bouncer and client with a retro aesthetic and modern conveniences. Self-host it free, or let us run it for you at lurker.chat." />
 <meta property="og:title" content="Lurker" />
-<meta property="og:description" content="A beautiful, always-on IRC client with a retro aesthetic and modern conveniences." />
+<meta property="og:description" content="A delightful, always-on IRC bouncer and client with a retro aesthetic and modern conveniences." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://lurker.chat/" />
 <meta property="og:image" content="https://lurker.chat/img/screenshot.png" />
@@ -23,15 +23,21 @@
 
   <section class="hero">
     <h1>Lurker</h1>
-    <p class="lede">A beautiful, always-on IRC client with a retro aesthetic and modern conveniences.</p>
+    <p class="lede">A delightful, always-on IRC bouncer and client with a retro aesthetic and modern conveniences.</p>
   </section>
 
   <section class="shots">
-    <figure class="shot">
-      <a href="#fig1" aria-label="Enlarge the Lurker screenshot"><img src="/img/screenshot.png" alt="The Lurker web client: a network and channel list, an active conversation, and a member list in a dark retro terminal interface." width="1649" height="1111" /></a>
+    <figure class="shot shot-desktop">
+      <a href="#fig1" aria-label="Enlarge the Lurker screenshot"><img src="/img/screenshot.png" alt="The Lurker web client: a network and channel list, an active conversation, and a member list in a dark retro terminal interface." width="1675" height="1103" /></a>
+      <figcaption>Desktop PWA</figcaption>
     </figure>
     <figure class="shot">
       <a href="#fig2" aria-label="Enlarge the Lurker for iOS screenshots"><img src="/img/ios-screenshot.png" alt="Lurker for iOS: the buffer list, a channel conversation, bookmarks, and message search." width="1289" height="695" loading="lazy" /></a>
+      <figcaption>iPhone</figcaption>
+    </figure>
+    <figure class="shot">
+      <a href="#fig3" aria-label="Enlarge the Lurker for Android screenshots"><img src="/img/android-screenshot.png" alt="Lurker for Android: the buffer list, two channel conversations with replies and reactions, and settings." width="1289" height="695" loading="lazy" /></a>
+      <figcaption>Android</figcaption>
     </figure>
   </section>
 
@@ -39,19 +45,20 @@
     <h2>Features</h2>
     <ul>
       <li><b>Always-on and multi-user.</b> Each invited user connects to their own set of IRC networks, and Lurker stays connected when they're away. Admins can restrict which networks users can connect to, and make channel recommendations for newcomers.</li>
-      <li><b>Fully working search.</b> Search your message history, filter by nick, channel, or network; and jump to any message instantly, no matter how old it is.</li>
-      <li><b>Modern conveniences.</b> Peer presence, automatic nick regain, join/part summarization, tab nickname completion, message drafts, saved messages, user notes, inline link and media previews, and more.</li>
-      <li><b>Image uploads.</b> Paste an image into the input box, and Lurker optimizes it, sanitizes it, and uploads it to local storage, S3, Zipline, Chibisafe, or external services like x0.at or catbox.moe.</li>
-      <li><b>Open source.</b> Unlike some other cloud-hosted IRC clients, Lurker is fully open source and always will be. Lurker is yours to host, modify, and share with whoever you want.</li>
+      <li><b>Modern conveniences.</b> Peer presence, automatic nick regain, join/part summarization, smart nickname completion, cross-client message drafts, bookmarks, user notes, a powerful highlight &amp; ignore system, reactions, replies, and more.</li>
+      <li><b>Full search.</b> Search your message history, filter by nick, channel, or network; and jump to any message instantly, no matter how old it is.</li>
+      <li><b>Image uploads.</b> Paste an image into the input box, and Lurker optimizes it, anonymizes it, and uploads it to local storage, S3, Zipline, Chibisafe, or external services like x0.at or catbox.moe.</li>
       <li><b>Customizable UI.</b> The beautiful retro terminal-style PWA interface has 40+ settings to customize it how you want.</li>
-      <li><b>Native apps.</b> Lurker has official native apps <a href="https://github.com/amiantos/lurker-ios">for iOS</a> (in beta) and Android (coming soon). There's also third party clients like <a href="https://github.com/JawshTheDark/lurker-android-upstream">Spooky</a> (Android) and <a href="https://github.com/JawshTheDark/scully">Scully</a> (PC).</li>
-      <li><b>Built-in soju-compatible bouncer.</b> Don't want to use the Lurker clients? Then don't. Lurker has a ZNC and soju compatible bouncer built in, complete with <code>soju.im/bouncer-networks</code> support, so you can use any client you want.</li>
+      <li><b>Native apps.</b> Lurker has official native apps <a href="https://github.com/amiantos/lurker-ios">for iOS</a> and <a href="https://github.com/amiantos/lurker-android">for Android</a>. There are also third-party clients such as <a href="https://github.com/JawshTheDark/lurker-android-upstream">Spooky</a> (Android), and <a href="https://luir.org">luir</a> (TUI), which bring their own flavor to Lurker.</li>
+      <li><b>Built-in bouncer.</b> Don't want to use the Lurker clients? Then don't. Lurker has a best-in-class IRC bouncer built in, complete with <code>soju.im/bouncer-networks</code>, <code>soju.im/FILEHOST</code> support and more, so you can use any IRC client you want, like <a href="https://github.com/rekkals/clircs">clircs</a>, <a href="https://github.com/squidowl/halloy">Halloy</a>, <a href="https://codeberg.org/emersion/goguma">Goguma</a>, <a href="https://github.com/boxlabss/hexdroid">HexDroid</a> and many others.</li>
+      <li><b>Inline link &amp; media previews.</b> Links, images, <em>and</em> videos get proper preview images in every client. Implemented as a separate container, to isolate malicious links from your users' data. (Optional, requires <code>lurker-previews</code> container.)</li>
+      <li><b>Decoupled IRC connections.</b> Say goodbye to disconnect/reconnect floods when updating Lurker — a secondary container keeps the connections alive while the main service restarts. (Optional, requires <code>lurker-engine</code> container.)</li>
     </ul>
   </section>
 
   <section class="doors" id="get-lurker">
     <h2>Get Lurker For Free</h2>
-    <p class="doors-lede">Docker is the officially supported way to run Lurker. Get started by downloading the <code>docker-compose.yml</code> file and running the container.</p>
+    <p class="doors-lede">Docker is the officially supported way to run Lurker (you can <a href="https://github.com/amiantos/lurker/blob/main/docs/MIGRATION_ENGINE.md#running-without-docker-running-without-docker">run it without Docker</a>, if you must). Get started by downloading the <code>docker-compose.yml</code> file and running the container.</p>
     <pre class="cmd"><code>curl -O https://raw.githubusercontent.com/amiantos/lurker/main/docker-compose.yml
 docker compose up -d
 open <a href="http://localhost:8015/">http://localhost:8015/</a></code></pre>
@@ -69,7 +76,7 @@ open <a href="http://localhost:8015/">http://localhost:8015/</a></code></pre>
         <p class="actions"><a class="btn primary" href="https://app.lurker.chat/signup">Sign up / Sign in &rarr;</a></p>
       </div>
       <div>
-        <p>Or, show your support by throwing some money at Lurker.</p>
+        <p>Or, <strong>show your support</strong> by throwing some money at Lurker.</p>
         <p class="actions"><a class="btn" href="https://buy.stripe.com/bJe00lfnN3HO3a920e3sI00">Leave a tip &rarr;</a></p>
       </div>
     </div>
@@ -98,6 +105,7 @@ open <a href="http://localhost:8015/">http://localhost:8015/</a></code></pre>
 
 <a href="#_" id="fig1" class="lightbox" aria-label="Close enlarged screenshot"><img src="/img/screenshot.png" alt="" /></a>
 <a href="#_" id="fig2" class="lightbox" aria-label="Close enlarged screenshot"><img src="/img/ios-screenshot.png" alt="" /></a>
+<a href="#_" id="fig3" class="lightbox" aria-label="Close enlarged screenshot"><img src="/img/android-screenshot.png" alt="" /></a>
 
 <!-- 100% privacy-first analytics -->
 <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
