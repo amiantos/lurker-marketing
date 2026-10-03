@@ -84,7 +84,7 @@ a:hover { border-bottom-color: currentColor; }
   color: var(--fg-2);
 }
 /* the macOS window shot carries its drop shadow as transparent padding */
-.shot-desktop figcaption { margin-top: -17px; }
+.shot-desktop figcaption { margin-top: -22px; }
 
 /* full-size overlay — shown only while its id is the URL :target */
 .lightbox {
