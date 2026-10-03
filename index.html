@@ -45,13 +45,14 @@
     <h2>Features</h2>
     <ul>
       <li><b>Always-on and multi-user.</b> Each invited user connects to their own set of IRC networks, and Lurker stays connected when they're away. Admins can restrict which networks users can connect to, and make channel recommendations for newcomers.</li>
+      <li><b>Modern conveniences.</b> Peer presence, automatic nick regain, join/part summarization, smart nickname completion, cross-client message drafts, bookmarks, user notes, a powerful highlight &amp; ignore system, reactions, replies, and more.</li>
       <li><b>Full search.</b> Search your message history, filter by nick, channel, or network; and jump to any message instantly, no matter how old it is.</li>
-      <li><b>Modern conveniences.</b> Peer presence, automatic nick regain, join/part summarization, smart nickname completion, cross-client message drafts, bookmarks, user notes, a powerful highlight &amp; ignore system, reactions, replies, inline link and media previews, and more.</li>
       <li><b>Image uploads.</b> Paste an image into the input box, and Lurker optimizes it, anonymizes it, and uploads it to local storage, S3, Zipline, Chibisafe, or external services like x0.at or catbox.moe.</li>
-      <li><b>Open source.</b> Unlike some other cloud-hosted IRC clients, Lurker is fully open source and always will be. Lurker is yours to host, modify, and share with whoever you want.</li>
       <li><b>Customizable UI.</b> The beautiful retro terminal-style PWA interface has 40+ settings to customize it how you want.</li>
-      <li><b>Native apps.</b> Lurker has official native apps <a href="https://github.com/amiantos/lurker-ios">for iOS</a> and <a href="https://github.com/amiantos/lurker-android">for Android</a>. There are also third-party clients such as <a href="https://github.com/JawshTheDark/lurker-android-upstream">Spooky</a> (Android), <a href="https://luir.org">luir</a> (TUI), and <a href="https://github.com/JawshTheDark/scully">Scully</a> (PC), which bring their own flavor to Lurker.</li>
+      <li><b>Native apps.</b> Lurker has official native apps <a href="https://github.com/amiantos/lurker-ios">for iOS</a> and <a href="https://github.com/amiantos/lurker-android">for Android</a>. There are also third-party clients such as <a href="https://github.com/JawshTheDark/lurker-android-upstream">Spooky</a> (Android), and <a href="https://luir.org">luir</a> (TUI), which bring their own flavor to Lurker.</li>
       <li><b>Built-in bouncer.</b> Don't want to use the Lurker clients? Then don't. Lurker has a best-in-class IRC bouncer built in, complete with <code>soju.im/bouncer-networks</code>, <code>soju.im/FILEHOST</code> support and more, so you can use any IRC client you want, like <a href="https://github.com/rekkals/clircs">clircs</a>, <a href="https://github.com/squidowl/halloy">Halloy</a>, <a href="https://codeberg.org/emersion/goguma">Goguma</a>, <a href="https://github.com/boxlabss/hexdroid">HexDroid</a> and many others.</li>
+      <li><b>Inline link &amp; media previews.</b> Links, images, <em>and</em> videos get proper preview images in every client. Implemented as a separate container, to isolate malicious links from your users' data. (Optional, requires <code>lurker-previews</code> container.)</li>
+      <li><b>Decoupled IRC connections.</b> Say goodbye to disconnect/reconnect floods when updating Lurker — a secondary container keeps the connections alive while the main service restarts. (Optional, requires <code>lurker-engine</code> container.)</li>
     </ul>
   </section>
 
