@@ -49,7 +49,7 @@
       <li><b>Full search.</b> Search your message history, filter by nick, channel, or network; and jump to any message instantly, no matter how old it is.</li>
       <li><b>Image uploads.</b> Paste an image into the input box, and Lurker optimizes it, anonymizes it, and uploads it to local storage, S3, Zipline, Chibisafe, or external services like x0.at or catbox.moe.</li>
       <li><b>Customizable UI.</b> The beautiful retro terminal-style PWA interface has 40+ settings to customize it how you want.</li>
-      <li><b>Native apps.</b> Lurker has official native apps <a href="https://github.com/amiantos/lurker-ios">for iOS</a> and <a href="https://github.com/amiantos/lurker-android">for Android</a>. There are also third-party clients such as <a href="https://github.com/JawshTheDark/lurker-android-upstream">Spooky</a> (Android), and <a href="https://luir.org">luir</a> (TUI), which bring their own flavor to Lurker. Self-hosting? <a href="https://push.lurker.chat">push.lurker.chat</a> lets your server send native push to both apps.</li>
+      <li><b>Native apps.</b> Lurker has official native apps <a href="https://github.com/amiantos/lurker-ios">for iOS</a> and <a href="https://github.com/amiantos/lurker-android">for Android</a>. A self-hosted server can send native push notifications to both through <a href="https://push.lurker.chat">push.lurker.chat</a>, an optional paid relay. There are also third-party clients such as <a href="https://github.com/JawshTheDark/lurker-android-upstream">Spooky</a> (Android), and <a href="https://luir.org">luir</a> (TUI), which bring their own flavor to Lurker.</li>
       <li><b>Built-in bouncer.</b> Don't want to use the Lurker clients? Then don't. Lurker has a best-in-class IRC bouncer built in, complete with <code>soju.im/bouncer-networks</code>, <code>soju.im/FILEHOST</code> support and more, so you can use any IRC client you want, like <a href="https://github.com/rekkals/clircs">clircs</a>, <a href="https://github.com/squidowl/halloy">Halloy</a>, <a href="https://codeberg.org/emersion/goguma">Goguma</a>, <a href="https://github.com/boxlabss/hexdroid">HexDroid</a> and many others.</li>
       <li><b>Inline link &amp; media previews.</b> Links, images, <em>and</em> videos get proper preview images in every client. Implemented as a separate container, to isolate malicious links from your users' data. (Optional, requires <code>lurker-previews</code> container.)</li>
       <li><b>Decoupled IRC connections.</b> Say goodbye to disconnect/reconnect floods when updating Lurker — a secondary container keeps the connections alive while the main service restarts. (Optional, requires <code>lurker-engine</code> container.)</li>
@@ -80,6 +80,8 @@ open <a href="http://localhost:8015/">http://localhost:8015/</a></code></pre>
         <p class="actions"><a class="btn" href="https://buy.stripe.com/bJe00lfnN3HO3a920e3sI00">Leave a tip &rarr;</a></p>
       </div>
     </div>
+    <p class="doors-lede relay"><strong>Self-hosting?</strong> <a href="https://push.lurker.chat">push.lurker.chat</a> is a <strong>$20/year</strong> relay that lets your own server send native push notifications to the iOS and Android apps. One subscription covers every user on it.</p>
+    <p class="actions"><a class="btn" href="https://push.lurker.chat">Get the relay &rarr;</a></p>
   </section>
 
 </main>

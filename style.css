@@ -122,6 +122,7 @@ a:hover { border-bottom-color: currentColor; }
 /* ── home: the two doors — self-host free, or hosted ──────────────────────── */
 .doors { padding: clamp(48px, 9vw, 96px) 0; border-top: 1px solid var(--rule); text-align: center; }
 .doors .doors-lede { margin: 0 auto; max-width: 54ch; color: var(--fg-2); }
+.doors .doors-lede.relay { margin-top: 70px; }
 .doors .actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin: 26px 0 0; }
 .doors .fineprint { margin: 26px auto 0; max-width: 56ch; }
 
