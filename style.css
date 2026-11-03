@@ -237,7 +237,8 @@ a:hover { border-bottom-color: currentColor; }
   .doors .actions .btn { width: 100%; }
   .split { grid-template-columns: 1fr; grid-template-rows: none; gap: 36px; }
   .split > div { grid-row: auto; grid-template-rows: none; }
-  .split.titled { gap: 0; }
+  .split.titled { gap: 0; text-align: center; }
+  .split.titled .actions { justify-content: center; }
   .split.titled > div, .split.titled > div:last-child { border-left: 0; border-right: 0; padding-left: 0; padding-right: 0; }
   .split.titled > div + div { border-top: 1px solid var(--rule); }
 }
