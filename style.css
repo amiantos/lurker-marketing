@@ -124,7 +124,6 @@ a:hover { border-bottom-color: currentColor; }
 .doors .doors-lede { margin: 0 auto; max-width: 54ch; color: var(--fg-2); }
 .doors .actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin: 26px 0 0; }
 .doors .fineprint { margin: 26px auto 0; max-width: 56ch; }
-.doors .fineprint + .fineprint { margin-top: 8px; }
 /* managed hosting: two titled plans in a ruled box. The horizontal rules run the
    full width of the section; the box with its vertical rules sits centered on them. */
 .doors .plans { margin-top: clamp(28px, 5vw, 48px); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
