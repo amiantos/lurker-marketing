@@ -119,15 +119,13 @@ a:hover { border-bottom-color: currentColor; }
 .features li:last-child { margin-bottom: 0; }
 .features li b { color: var(--fg); font-weight: 700; }
 
-/* ── home: the two doors — run it yourself, or hosted (free | $5/mo) ─────── */
+/* ── home: the two doors — self-host, or managed hosting ($5/mo, free to try) ── */
 .doors { padding: clamp(48px, 9vw, 96px) 0; border-top: 1px solid var(--rule); text-align: center; }
 .doors .doors-lede { margin: 0 auto; max-width: 54ch; color: var(--fg-2); }
-.doors .doors-lede.signin { margin-top: 26px; }
-/* the hosted door: the plan cards, then the tip and the relay as a quieter second row */
-.doors .plans { margin-top: clamp(28px, 5vw, 48px); }
-.doors .extras { margin-top: 70px; }
 .doors .actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin: 26px 0 0; }
 .doors .fineprint { margin: 26px auto 0; max-width: 56ch; }
+/* a lede above the two columns (managed hosting) gets the same gap the heading does */
+.doors .doors-lede + .split { margin-top: clamp(28px, 5vw, 48px); }
 
 /* the self-host one-liner: quiet, left-aligned, and scrolls on its own so the
    long raw.githubusercontent URL can never widen the page */
